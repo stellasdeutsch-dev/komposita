@@ -482,6 +482,135 @@ html.no-tts .say{display:none}
 .dock .btn{min-height:46px;padding:0 18px}
 @media (min-width:900px){.dock{left:auto;right:24px;bottom:24px;width:420px}}
 footer{padding:40px 0 120px;color:var(--mute);font-size:13px;text-align:center}
+
+/* train */
+.tw{position:relative;overflow:hidden;padding:56px 0 30px;margin-top:10px}
+html:not(.gs) .tw{overflow-x:auto}
+.rail{position:absolute;left:0;right:0;bottom:30px;height:6px;background:repeating-linear-gradient(90deg,#3a3642 0 14px,transparent 14px 22px);border-top:2px solid #55505f}
+.rail{animation:rail .5s linear infinite}
+@keyframes rail{to{background-position:-22px 0}}
+.trn{display:flex;align-items:flex-end;gap:10px;width:max-content;padding:0 var(--gut)}
+.wg{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:96px;height:86px;padding:0 14px 10px;border-radius:12px 12px 6px 6px;background:linear-gradient(180deg,#1d1b24,#121117);border:1px solid rgba(255,255,255,.08);margin-bottom:14px}
+.wg::after{content:"";position:absolute;right:-11px;bottom:22px;width:12px;height:4px;background:#55505f}
+.wg:last-child::after{display:none}
+.wg b{font:700 26px/1 var(--f-c);color:#fff}
+.wg:nth-child(even) b{color:var(--g1)}
+.wg small{font-size:11px;color:var(--mute)}
+.wg.gl{min-width:52px;background:linear-gradient(180deg,#7c4dff,#5a2fd1)}
+.wg.gl b{color:#fff}.wg.gl small{color:#ddd}
+.wg.loco{min-width:200px;height:112px;border-radius:14px 40px 8px 8px;background:linear-gradient(180deg,#FFE7A3,#E2AD4A 60%,#B98030);border:0;box-shadow:0 0 50px rgba(226,176,78,.45)}
+.wg.loco b{color:#2b1c05;font-size:30px}.wg.loco small{color:#5b3f10;font-weight:700}
+.wh{position:absolute;bottom:-14px;width:24px;height:24px;border-radius:50%;background:radial-gradient(circle,#888 0 3px,#222 4px 8px,#555 9px);border:2px solid #77727f;animation:spin 1.2s linear infinite}
+.wg .wh:nth-of-type(1){left:12px}.wg .wh:nth-of-type(2){right:12px}.wg .wh:nth-of-type(3){left:50%;margin-left:-12px}
+.wg.gl .wh{left:50%;margin-left:-12px}
+.crown{position:absolute;top:-30px;left:50%;translate:-50% 0;font-size:24px;color:var(--g2);filter:drop-shadow(0 0 10px rgba(226,176,78,.8))}
+.smoke{position:absolute;top:-40px;right:22px;width:30px;height:40px}
+.smoke i{position:absolute;bottom:0;left:0;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.25);filter:blur(2px);animation:puff 2.4s ease-out infinite}
+.smoke i:nth-child(2){animation-delay:.8s}.smoke i:nth-child(3){animation-delay:1.6s}
+@keyframes puff{from{translate:0 0;scale:.5;opacity:.8}to{translate:30px -50px;scale:2.2;opacity:0}}
+.tcap{color:var(--tx2);font-size:15px;padding:0 0 0}
+/* rank */
+.rank{margin-top:56px}
+.rks{display:grid;gap:14px;margin:22px 0 16px}
+.rw{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
+.rw span{font:600 clamp(15px,4.2vw,20px)/1.15 var(--f-c);color:#fff;word-break:break-word;cursor:pointer}
+.rw b{font:700 22px/1 var(--f-c);color:var(--g2)}
+.rb{height:12px;border-radius:12px;background:rgba(255,255,255,.05);overflow:hidden}
+.rb i{display:block;height:100%;width:var(--w);border-radius:12px;background:linear-gradient(90deg,#6d3fe0,#a78bfa);transform-origin:0 50%}
+.rk.boss .rb{height:18px}
+.rk.boss .rb i{background:linear-gradient(90deg,#B98030,#FFE7A3)}
+.rk.boss .rw span{color:var(--g1)}
+/* ad: intro device */
+.intro{display:grid;gap:40px;align-items:center}
+@media (min-width:900px){.intro{grid-template-columns:1.1fr .9fr}}
+.dev{position:relative;padding:30px 30px 20px;max-width:420px;margin:0 auto;width:100%}
+.phone{position:relative;margin:0 auto;width:min(72vw,280px);border-radius:38px;padding:10px;background:linear-gradient(160deg,#2b2833,#0d0c11);box-shadow:0 0 0 1px rgba(255,255,255,.1),0 50px 80px -30px #000,0 0 80px rgba(124,77,255,.35)}
+.pscr{border-radius:30px;background:#FBFAF8;color:#1d1b22;padding:20px 14px 18px;min-height:420px}
+.nh{display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid #eee}
+.nh img{width:34px;height:34px;border-radius:8px}
+.nh b{display:block;font:800 15px var(--f-b)}.nh small{font-size:11px;color:#8a8796}
+.nbar{height:8px;border-radius:8px;background:#eee;margin:14px 0 6px;overflow:hidden}
+.nbar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#8b5cf6,#e2b04e);transform-origin:0 50%;transform:scaleX(0);transition:transform .5s}
+.ntx{font-size:11.5px;color:#8a8796}
+.nl{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.nl li{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;background:#F1EFF6;font:600 13.5px var(--f-b);transition:background .3s}
+.nl li em{margin-left:auto;font-style:normal;font-size:11px;font-weight:800;color:#8b5cf6;background:#e9e2ff;padding:3px 7px;border-radius:6px}
+.nl .cb{width:18px;height:18px;border-radius:5px;border:2px solid #c9c4d6;display:grid;place-items:center;transition:background .25s,border-color .25s;flex:none}
+.nl li.on{background:#EFE9FF}
+.nl li.on .cb{background:#8b5cf6;border-color:#8b5cf6}
+.nl li.on .cb::after{content:"";width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;rotate:45deg;margin-top:-2px}
+.nl li.on{text-decoration:line-through;text-decoration-color:#b9a8ef}
+.fl{position:absolute;display:inline-flex;align-items:center;gap:6px;padding:9px 12px;border-radius:12px;background:#17151d;border:1px solid rgba(255,255,255,.1);font:700 12.5px var(--f-b);color:#fff;box-shadow:0 20px 40px -14px #000;animation:bob 4s ease-in-out infinite}
+.fl .ic{color:var(--g2)}
+.fl.f1{left:0;top:16%}.fl.f2{right:0;top:30%;animation-delay:-1s}.fl.f3{left:2%;bottom:24%;animation-delay:-2s}.fl.f4{right:4%;bottom:8%;animation-delay:-3s}
+@keyframes bob{50%{translate:0 -10px}}
+/* how steps */
+.hs{position:relative;display:grid;gap:18px;margin-top:30px;padding-left:58px}
+.hsl{position:absolute;left:21px;top:20px;bottom:20px;width:3px;border-radius:3px;background:rgba(255,255,255,.07)}
+.hsl i{display:block;width:100%;height:100%;border-radius:3px;background:linear-gradient(180deg,#8b5cf6,#e2b04e);transform-origin:50% 0}
+.hst{position:relative;border-radius:18px;padding:18px;background:#111016;border:1px solid var(--line)}
+.hn{position:absolute;left:-58px;top:14px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:700 22px var(--f-c);color:#2b1c05;background:linear-gradient(180deg,#FFE7A3,#E2AD4A);box-shadow:0 0 0 6px var(--bg),0 0 30px rgba(226,176,78,.5)}
+.hst h4{margin:0 0 6px;font:700 24px/1.05 var(--f-c);text-transform:uppercase}
+.hst p{margin:0;color:var(--tx2);font-size:15px}
+.mini{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
+.mini span{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:9px;background:#1b1922;border:1px solid var(--line);font:600 12.5px var(--f-b);color:var(--tx2);transition:background .3s,color .3s,border-color .3s}
+.mini b{color:var(--mute);font-weight:400}
+.mini.lv span:nth-child(1){border-color:rgba(139,92,246,.5);color:var(--pul)}
+.mini.lv span:nth-child(2){border-color:rgba(226,176,78,.5);color:var(--g1)}
+.mini.lv span.both{background:linear-gradient(180deg,#FFE7A3,#E2AD4A);color:#2b1c05;border-color:transparent;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(226,176,78,.15)}}
+.mini.fl4 span.on{background:rgba(139,92,246,.22);border-color:rgba(139,92,246,.6);color:#fff}
+.mini.heat{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;max-width:300px}
+.mini.heat i{aspect-ratio:1;border-radius:4px;background:rgba(255,255,255,.06);transition:background .3s}
+.mini.heat i.on{background:#8b5cf6}.mini.heat i.on2{background:#e2b04e}
+/* anatomy */
+.anat{display:grid;gap:12px;margin-top:26px;max-width:620px}
+.ly{position:relative;border-radius:16px;padding:16px;background:#F7F6FA;color:#1d1b22;box-shadow:0 30px 50px -30px #000}
+.lt2{display:inline-block;font:800 11px var(--f-b);letter-spacing:.12em;text-transform:uppercase;color:#8b5cf6;background:#ece5ff;padding:5px 8px;border-radius:6px;margin-bottom:10px}
+.lt2.g{color:#5b3f10;background:#f8e3b0}
+.ly h5{margin:0 0 10px;font:700 22px/1.05 var(--f-c);text-transform:uppercase}
+.ly .ln{display:block;height:8px;border-radius:8px;background:#e6e3ee;margin-top:7px}
+.ly .ln.s{width:80%}.ly .ln.m{width:55%}
+.ly .vid{position:relative;border-radius:10px;overflow:hidden}
+.ly .vid img{width:100%;aspect-ratio:16/8;object-fit:cover;object-position:top}
+.ly .pl{position:absolute;inset:0;margin:auto;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:rgba(124,77,255,.9);color:#fff;font-size:22px;box-shadow:0 0 0 8px rgba(124,77,255,.25)}
+.ly .ex{font:700 30px var(--f-c);display:flex;align-items:center;gap:4px}
+.ly .blank{display:inline-grid;place-items:center;min-width:34px;height:40px;border-radius:8px;border:2px dashed #b9a8ef;color:#7c4dff}
+.ly .blank.ok{border-style:solid;border-color:#3cb371;background:#e8f8ee;color:#1e8a4c}
+.ly .opts{display:flex;gap:8px;margin-top:10px}
+.ly .opts span{padding:6px 14px;border-radius:8px;background:#ece9f3;font:700 15px var(--f-c);transition:background .3s,color .3s}
+.ly .opts span.ok{background:#3cb371;color:#fff}
+.ly.l4 p,.ly.l5 p{margin:0;font-size:14.5px;color:#4b4957}
+.ly.l4 .ic{color:#3cb371}
+.ly.l5{background:linear-gradient(135deg,#2a2232,#17151d);color:#fff;border:1px solid rgba(226,176,78,.4)}
+.ly.l5 p{color:var(--tx2)}
+/* ladder */
+.lad{margin-top:26px;padding:26px 14px 18px}
+.lsteps{position:relative;display:grid;grid-template-columns:repeat(6,1fr);align-items:end;gap:6px;height:220px}
+.ls{position:relative;height:var(--h);border-radius:10px 10px 4px 4px;display:flex;flex-direction:column;align-items:center;padding-top:10px;transform-origin:50% 100%}
+.ls.p{background:linear-gradient(180deg,#9b78ff,#4b23b8)}
+.ls.g{background:linear-gradient(180deg,#FFE7A3,#B98030)}
+.ls b{font:700 20px/1 var(--f-c);color:#fff}
+.ls.g b{color:#2b1c05}
+.ls small{font:600 9.5px/1.1 var(--f-b);text-align:center;color:rgba(255,255,255,.8);margin-top:4px;padding:0 2px}
+.ls.g small{color:#4a320b}
+.ball{position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 0 20px #fff,0 0 40px var(--g2);visibility:hidden}
+.lbr{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+.lbr span{text-align:center;padding:8px;border-radius:8px;font:700 13px var(--f-b)}
+.lbr .p{background:rgba(139,92,246,.18);color:var(--pul)}
+.lbr .g{background:rgba(226,176,78,.16);color:var(--g1)}
+.lbr.all{grid-template-columns:1fr}
+.lbr.all span{background:linear-gradient(180deg,#FFE7A3,#E2AD4A);color:#2b1c05}
+.lbr s{opacity:.55}
+.swipe{display:inline-block;color:var(--g2);animation:sw 1.4s ease-in-out infinite}
+@keyframes sw{50%{translate:8px 0}}
+.pr .who{text-align:center;margin:10px 0 0;font-size:13.5px;color:#6d3fe0;font-weight:700}
+.buy{display:grid;gap:10px;margin-top:22px}
+@media (min-width:760px){.buy{grid-template-columns:repeat(3,1fr)}}
+.by{display:grid;grid-template-columns:44px 1fr;column-gap:12px;align-items:center;padding:14px;border-radius:14px;background:#111016;border:1px solid var(--line)}
+.by .bi{grid-row:span 2;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:20px;color:#2b1c05;background:linear-gradient(180deg,#FFE7A3,#E2AD4A)}
+.by b{font:700 17px/1.1 var(--f-c);text-transform:uppercase}
+.by small{color:var(--mute);font-size:13px}
 .rv{will-change:transform}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -530,6 +659,19 @@ footer{padding:40px 0 120px;color:var(--mute);font-size:13px;text-align:center}
 <symbol id="i-list-checks" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></symbol>
 <symbol id="i-timer" viewBox="0 0 24 24"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></symbol>
 <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="i-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></symbol>
+<symbol id="i-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></symbol>
+<symbol id="i-mouse-pointer-click" viewBox="0 0 24 24"><path d="M14 4.1 12 6"/><path d="m5.1 8-2.9-.8"/><path d="m6 12-1.9 2"/><path d="M7.2 2.2 8 5.1"/><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/></symbol>
+<symbol id="i-graduation-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-train-front" viewBox="0 0 24 24"><path d="M8 3.1V7a4 4 0 0 0 8 0V3.1"/><path d="m9 15-1-1"/><path d="m15 15 1-1"/><path d="M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z"/><path d="m8 19-2 3"/><path d="m16 19 2 3"/></symbol>
+<symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-hand" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></symbol>
+<symbol id="i-pen-line" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+<symbol id="i-chevrons-right" viewBox="0 0 24 24"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></symbol>
+<symbol id="i-film" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></symbol>
 
 </svg>
 <div class="stars" aria-hidden="true"></div>
@@ -616,6 +758,27 @@ footer{padding:40px 0 120px;color:var(--mute);font-size:13px;text-align:center}
   </div>
 </section>
 
+
+<section id="train" style="padding-top:10px">
+  <div class="wrap">
+    <h2 class="h2 sil">Слово это <span class="pu">поезд</span></h2>
+    <span class="scr sm">главный вагон впереди</span>
+    <p class="lede">Поезд едет направо. Тянет его <b>последний</b> вагон. Он и решает, что это за слово. Остальные просто едут.</p>
+  </div>
+  <div class="tw" id="tw">
+    <div class="rail"></div>
+    <div class="trn" id="trn">
+      <div class="wg"><b>Donau</b><small>Дунай</small><i class="wh"></i><i class="wh"></i></div>
+      <div class="wg"><b>dampf</b><small>пар</small><i class="wh"></i><i class="wh"></i></div>
+      <div class="wg"><b>schiff</b><small>корабль</small><i class="wh"></i><i class="wh"></i></div>
+      <div class="wg"><b>fahrt</b><small>езда</small><i class="wh"></i><i class="wh"></i></div>
+      <div class="wg gl"><b>s</b><small>клей</small><i class="wh"></i></div>
+      <div class="wg loco"><span class="smoke"><i></i><i></i><i></i></span><span class="crown"><svg class="ic"><use href="#i-crown"/></svg></span><b>Gesellschaft</b><small>общество · главный</small><i class="wh"></i><i class="wh"></i><i class="wh"></i></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="tcap">Прокручивай. Едем вдоль поезда. <span class="gold">Читаем с локомотива:</span> общество ← пароходства ← дунайского.</p></div>
+</section>
+
 <div class="band" aria-hidden="true"><div class="trk" id="mq1"></div></div>
 <div class="band gd" aria-hidden="true"><div class="trk" id="mq2"></div></div>
 
@@ -634,6 +797,20 @@ footer{padding:40px 0 120px;color:var(--mute);font-size:13px;text-align:center}
       </div>
     </div>
     <div class="spoil"><span>Спойлер: справишься</span><span>И это только основное</span></div>
+
+    <div class="rank" id="rank">
+      <h3 class="h3 sil">Рейтинг <span class="pu">монстров</span></h3>
+      <p class="lede">Длина в буквах. Последний реально существовал.</p>
+      <div class="rks">
+        <div class="rk"><div class="rw"><span data-say="Handschuh">Handschuh</span><b>9</b></div><div class="rb"><i style="--w:14.3%"></i></div></div>
+        <div class="rk"><div class="rw"><span data-say="Kühlschrank">Kühlschrank</span><b>11</b></div><div class="rb"><i style="--w:17.5%"></i></div></div>
+        <div class="rk"><div class="rw"><span data-say="Geschwindigkeitsbegrenzung">Geschwindigkeitsbegrenzung</span><b>26</b></div><div class="rb"><i style="--w:41.3%"></i></div></div>
+        <div class="rk"><div class="rw"><span data-say="Arbeitsunfähigkeitsbescheinigung">Arbeitsunfähigkeitsbescheinigung</span><b>32</b></div><div class="rb"><i style="--w:50.8%"></i></div></div>
+        <div class="rk"><div class="rw"><span data-say="Donaudampfschifffahrtsgesellschaft">Donaudampfschifffahrtsgesellschaft</span><b>34</b></div><div class="rb"><i style="--w:54%"></i></div></div>
+        <div class="rk boss"><div class="rw"><span data-say="Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz">Rindfleischetikettierungs­überwachungsaufgaben­übertragungsgesetz</span><b>63</b></div><div class="rb"><i style="--w:100%"></i></div></div>
+      </div>
+      <p class="tcap" style="padding:0">63 буквы. Это длиннее, чем строчка на твоём телефоне. Нажми на слово, послушай.</p>
+    </div>
   </div>
 </section>
 
@@ -820,14 +997,104 @@ footer{padding:40px 0 120px;color:var(--mute);font-size:13px;text-align:center}
 
 <section id="platform">
   <div class="glow p" style="width:80vw;height:50vw;left:-30vw;top:5%"></div>
+  <div class="glow g" style="width:60vw;height:40vw;right:-25vw;top:30%"></div>
   <div class="wrap">
-    <div class="eye"><i></i>Stellas<i></i></div>
-    <div class="found">
+    <div class="eye"><i></i>Знакомься: Stellas<i></i></div>
+    <div class="intro">
       <div>
-        <h2 class="h2 sil">Этот гайд ты прочитал <span class="pu">за 7 минут</span></h2>
+        <h2 class="h2 sil" style="margin-top:18px">Этот гайд ты прочитал <span class="pu">за 7 минут</span></h2>
         <span class="scr sm">таких 340</span>
-        <p class="lede">У меня был канал. В канале были гайды. Люди говорили, удобно. Потом говорили, а можно всё в одном месте. Говорю, можно. Так появилась <b>платформа Stellas</b>.</p>
+        <p class="lede"><b>Stellas</b> это платформа для немецкого от <b>A0 до C1</b>. Внутри гайды как этот: коротко, с картинками, видео и упражнениями.</p>
+        <p class="lede">Всё лежит в <b>Notion</b>. Открываешь на телефоне или ноутбуке. Даже без интернета.</p>
+        <div class="btns"><a class="btn" href="#prices">Сколько стоит</a><a class="btn dk" href="#how">Как это работает</a></div>
       </div>
+      <div class="dev rv" id="dev">
+        <div class="phone">
+          <div class="pscr">
+            <div class="nh"><img src="media/logo.webp" alt=""><div><b>Stellas A0–C1</b><small>Notion · офлайн</small></div></div>
+            <div class="nbar"><i id="npBar"></i></div>
+            <small class="ntx"><span id="npN">0</span> из 6 гайдов на этой неделе</small>
+            <ul class="nl" id="nl">
+              <li><span class="cb"></span>Der, die, das<em>A1</em></li>
+              <li><span class="cb"></span>Akkusativ<em>A1</em></li>
+              <li><span class="cb"></span>Dativ без зубрёжки<em>A2</em></li>
+              <li><span class="cb"></span>Perfekt<em>A2</em></li>
+              <li><span class="cb"></span>Komposita<em>B1</em></li>
+              <li><span class="cb"></span>Konjunktiv II<em>B2</em></li>
+            </ul>
+          </div>
+        </div>
+        <span class="fl f1"><svg class="ic"><use href="#i-play"/></svg>видео</span>
+        <span class="fl f2"><svg class="ic"><use href="#i-volume-2"/></svg>озвучка</span>
+        <span class="fl f3"><svg class="ic"><use href="#i-circle-check"/></svg>ответы</span>
+        <span class="fl f4"><svg class="ic"><use href="#i-wifi-off"/></svg>офлайн</span>
+      </div>
+    </div>
+
+    <!-- HOW -->
+    <h2 class="h2 sil" id="how" style="margin-top:90px">Как это <span class="pu">работает?</span></h2>
+    <span class="scr sm">три шага</span>
+    <div class="hs" id="hs">
+      <div class="hsl"><i id="hsFill"></i></div>
+      <div class="hst rv"><span class="hn">1</span><div><h4>Выбираешь уровень</h4><p>С нуля бери A0–A2. Если база есть, B1–C1. Не уверен, бери обе.</p>
+        <div class="mini lv"><span>A0–A2</span><span>B1–C1</span><span class="both">A0–C1</span></div></div></div>
+      <div class="hst rv"><span class="hn">2</span><div><h4>Открываешь гайд</h4><p>Каждый гайд идёт по одной схеме. Не надо думать, что делать дальше.</p>
+        <div class="mini fl4" id="fl4"><span><svg class="ic"><use href="#i-book-open"/></svg>Правило</span><b>→</b><span><svg class="ic"><use href="#i-video"/></svg>Видео</span><b>→</b><span><svg class="ic"><use href="#i-pen-line"/></svg>Упражнение</span><b>→</b><span><svg class="ic"><use href="#i-circle-check"/></svg>Разбор</span></div></div></div>
+      <div class="hst rv"><span class="hn">3</span><div><h4>Отмечаешь прогресс</h4><p>Трекер в Notion показывает, сколько пройдено. Видишь, что двигаешься.</p>
+        <div class="mini heat" id="heat"></div></div></div>
+    </div>
+
+    <!-- ANATOMY -->
+    <h2 class="h2 sil" style="margin-top:90px">Что внутри <span class="pu">одного гайда</span></h2>
+    <p class="lede">Например, вот этот. Только на платформе.</p>
+    <div class="anat" id="anat">
+      <div class="ly l1"><span class="lt2">01 · Объяснение</span><h5>Длинное слово читаем с конца</h5><i class="ln"></i><i class="ln s"></i><i class="ln m"></i></div>
+      <div class="ly l2"><span class="lt2">02 · Видео</span><div class="vid"><img src="media/gemini.jpg" alt="" loading="lazy"><span class="pl"><svg class="ic"><use href="#i-play"/></svg></span></div></div>
+      <div class="ly l3"><span class="lt2">03 · Упражнение</span><div class="ex">Arbeit<span class="blank" id="blank">_</span>platz</div><div class="opts"><span>s</span><span>n</span><span>er</span></div></div>
+      <div class="ly l4"><span class="lt2">04 · Разбор ответа</span><p><svg class="ic"><use href="#i-circle-check"/></svg> <b>Arbeitsplatz.</b> s здесь клей. Перевода у него нет. Произносится легче: ар-байтс-плац.</p></div>
+      <div class="ly l5"><span class="lt2 g">+ версия в Gemini</span><p>Озвучка каждого слова, три упражнения и проверка от ИИ.</p></div>
+    </div>
+
+    <!-- LADDER -->
+    <h2 class="h2 sil" style="margin-top:90px">Две платформы. <span class="pu">Одна лестница</span></h2>
+    <div class="lad stage rv" id="lad">
+      <div class="lsteps">
+        <div class="ls p" style="--h:22%"><b>A0</b><small>алфавит</small></div>
+        <div class="ls p" style="--h:36%"><b>A1</b><small>магазин</small></div>
+        <div class="ls p" style="--h:50%"><b>A2</b><small>врач, звонки</small></div>
+        <div class="ls g" style="--h:64%"><b>B1</b><small>работа</small></div>
+        <div class="ls g" style="--h:80%"><b>B2</b><small>сертификат</small></div>
+        <div class="ls g" style="--h:96%"><b>C1</b><small>как носитель</small></div>
+        <span class="ball" id="ball"></span>
+      </div>
+      <div class="lbr"><span class="p">A0–A2 · 20 €</span><span class="g">B1–C1 · 20 €</span></div>
+      <div class="lbr all"><span>Вся лестница A0–C1 · <s>40 €</s> 30 €</span></div>
+    </div>
+
+    <!-- PAINS -->
+    <h2 class="h2 sil" style="margin-top:90px">Это для тебя, <span class="pu">если ты:</span></h2>
+    <div class="for">
+      <div class="fr rv"><div><h5><i></i>Боишься звонить</h5><p>Набираешь номер. Слышишь «Grüß Gott». Кладёшь трубку. <b>Пишешь письмо. Ждёшь неделю.</b></p></div><div class="rs"><small>Что поможет</small><p>Диалоги с озвучкой: врач, касса, магазин. И ИИ-собеседник в Gemini. Репетируешь звонок до звонка.</p></div></div>
+      <div class="fr rv"><div><h5><i></i>Ребёнок поправляет тебя</h5><p>Пришёл из школы. Говорит, не «der», а «die». <b>Смешно первый раз.</b> На пятый уже нет.</p></div><div class="rs"><small>Что поможет</small><p>Грамматика с объяснением, видео и разбором ответов. Не просто «правильно». А почему.</p></div></div>
+      <div class="fr rv"><div><h5><i></i>Нужен сертификат к сроку</h5><p>Работодатель сказал, будет B2, будет повышение. До экзамена полгода. <b>С чего начать, непонятно.</b></p></div><div class="rs"><small>Что поможет</small><p>Раздел экзаменов: Goethe, telc, DTZ, ÖSD, TestDaF. Плюс гайды по темам, которые попадаются на B2–C1.</p></div></div>
+    </div>
+
+    <!-- SHOWS -->
+    <h2 class="h2 sil" style="margin-top:90px">Как это <span class="pu">выглядит</span></h2>
+    <p class="lede">Настоящие записи экрана. Листай <span class="swipe"><svg class="ic"><use href="#i-chevrons-right"/></svg></span></p>
+    <div class="shows">
+      <div class="sh"><span class="tg">Gemini <small>B1 · супермаркет</small></span><div class="fr2"><video muted loop playsinline preload="none" data-src="media/gemini.mp4" data-poster="media/gemini.jpg"></video></div><h6>Интерактивный гайд</h6><p>Словарь с озвучкой, история, диалоги, тест.</p></div>
+      <div class="sh"><span class="tg">Notion <small>лексика</small></span><div class="fr2"><video muted loop playsinline preload="none" data-src="media/notion.mp4" data-poster="media/notion.jpg"></video></div><h6>Лексика по ситуациям</h6><p>Врач, Jobcenter, касса, поиск работы.</p></div>
+      <div class="sh"><span class="tg">App <small>der · die · das</small></span><div class="fr2 ph"><video muted loop playsinline preload="none" data-src="media/app.mp4" data-poster="media/app.jpg"></video></div><h6>Слова с артиклями</h6><p>Карточки по темам, примеры, переводчик.</p></div>
+      <div class="sh"><span class="tg">C1 <small>грамматика</small></span><div class="fr2"><img src="media/c1-hero.webp" alt="Гайд Wollen → Sollen уровня C1" loading="lazy"></div><h6>Wollen → Sollen</h6><p>Сложные темы C1 простыми схемами.</p></div>
+      <div class="sh"><span class="tg">Gemini <small>у врача</small></span><div class="fr2"><img src="media/g-krank.webp" alt="Гайд Im Krankenhaus" loading="lazy"></div><h6>Im Krankenhaus</h6><p>Текст с переводом по клику.</p></div>
+      <div class="sh"><span class="tg">Пазл <small>фразы</small></span><div class="fr2"><img src="media/g-puzzle.webp" alt="Конструктор предложений" loading="lazy"></div><h6>Собери предложение</h6><p>Мгновенная проверка порядка слов.</p></div>
+      <div class="sh"><span class="tg">Notion <small>трекер</small></span><div class="fr2"><img src="media/n-tracker.webp" alt="Трекер прогресса" loading="lazy"></div><h6>Трекер прогресса</h6><p>Цель, уроки, результат.</p></div>
+    </div>
+
+    <!-- STATS + INSIDE -->
+    <div class="found" style="margin-top:70px">
+      <div><h2 class="h2 sil">В цифрах</h2><span class="scr sm">без воды</span></div>
       <div class="stats">
         <div class="st"><b class="count" data-to="340">340</b><span>гайдов от A0 до C1. Грамматика, лексика, живые фразы</span></div>
         <div class="st"><b class="count" data-to="7500">7500</b><span>слов с озвучкой и транскрипцией</span></div>
@@ -835,48 +1102,36 @@ footer{padding:40px 0 120px;color:var(--mute);font-size:13px;text-align:center}
         <div class="st"><b class="count" data-to="5">5</b><span>экзаменов: Goethe, telc, DTZ, ÖSD, TestDaF</span></div>
       </div>
     </div>
-
-    <h2 class="h2 sil" style="margin-top:80px">Это для тебя, <span class="pu">если ты:</span></h2>
-    <div class="for">
-      <div class="fr rv"><div><h5><i></i>Боишься звонить</h5><p>Набираешь номер в Termin-службу. Слышишь «Grüß Gott». Кладёшь трубку. <b>Пишешь письмо. Ждёшь неделю.</b></p></div><div class="rs"><small>Результат</small><p>Диалоги с озвучкой по ситуациям: врач, касса, магазин. И чат с ИИ в Gemini, который отвечает в образе. Репетируешь звонок до звонка.</p></div></div>
-      <div class="fr rv"><div><h5><i></i>Ребёнок поправляет тебя</h5><p>Пришёл из школы. Говорит, мам, не «der», а «die». <b>Смешно первый раз.</b> На пятый уже не очень.</p></div><div class="rs"><small>Результат</small><p>Каждый гайд по грамматике: объяснение, видео, упражнение и ответы с разбором. Не просто «правильно». А почему.</p></div></div>
-      <div class="fr rv"><div><h5><i></i>Сертификат нужен к дедлайну</h5><p>Работодатель сказал, B2 и повышение твоё. До экзамена полгода. <b>А ты не знаешь, с чего начать.</b></p></div><div class="rs"><small>Результат</small><p>Раздел экзаменов: Goethe, telc, DTZ, ÖSD, TestDaF. Интерактивные гайды по темам, которые реально попадаются на B2–C1.</p></div></div>
-    </div>
-
-    <h2 class="h2 sil" style="margin-top:80px;text-align:center">Что <span class="pu">внутри?</span></h2>
     <div class="how">
       <div class="hw rv"><div class="ib"><svg class="ic"><use href="#i-book-open"/></svg></div><p><b>340+ гайдов</b><br>в стиле канала</p></div>
-      <div class="hw rv"><div class="ib"><svg class="ic"><use href="#i-play"/></svg></div><p><b>Видео</b> к каждой<br>теме грамматики</p></div>
+      <div class="hw rv"><div class="ib"><svg class="ic"><use href="#i-play"/></svg></div><p><b>Видео</b> к темам<br>грамматики</p></div>
       <div class="hw rv"><div class="ib"><svg class="ic"><use href="#i-list-checks"/></svg></div><p><b>Упражнения</b><br>с ответами и разбором</p></div>
       <div class="hw rv"><div class="ib"><svg class="ic"><use href="#i-volume-2"/></svg></div><p><b>7500+ слов</b><br>с озвучкой</p></div>
       <div class="hw rv"><div class="ib"><svg class="ic"><use href="#i-sparkles"/></svg></div><p><b>Gemini-гайды</b><br>словарь, текст, ИИ-чат</p></div>
       <div class="hw rv"><div class="ib"><svg class="ic"><use href="#i-trophy"/></svg></div><p><b>Экзамены</b><br>5 сертификатов</p></div>
-      <div class="hw rv"><div class="ib"><svg class="ic"><use href="#i-target"/></svg></div><p><b>Трекер</b><br>прогресса в Notion</p></div>
+      <div class="hw rv"><div class="ib"><svg class="ic"><use href="#i-film"/></svg></div><p><b>Фильмы, книги</b><br>по уровням</p></div>
       <div class="hw rv"><div class="ib"><svg class="ic"><use href="#i-wifi-off"/></svg></div><p><b>Офлайн</b><br>в приложении Notion</p></div>
     </div>
 
-    <h2 class="h2 sil" style="margin-top:80px;text-align:center">Ты точно <span class="pu">захочешь</span> это открыть</h2>
-    <div class="shows">
-      <div class="sh"><span class="tg">Gemini <small>B1 · супермаркет</small></span><div class="fr2"><video muted loop playsinline preload="none" data-src="media/gemini.mp4" data-poster="media/gemini.jpg"></video></div><h6>Интерактивный гайд</h6><p>Словарь с озвучкой, история, диалоги, тест, симулятор.</p></div>
-      <div class="sh"><span class="tg">Notion <small>лексика</small></span><div class="fr2"><video muted loop playsinline preload="none" data-src="media/notion.mp4" data-poster="media/notion.jpg"></video></div><h6>Лексика по ситуациям</h6><p>Врач, Jobcenter, касса, поиск работы. Фразы и видео.</p></div>
-      <div class="sh"><span class="tg">App <small>der · die · das</small></span><div class="fr2 ph"><video muted loop playsinline preload="none" data-src="media/app.mp4" data-poster="media/app.jpg"></video></div><h6>Слова с артиклями</h6><p>Карточки по темам, примеры, переводчик.</p></div>
-      <div class="sh"><span class="tg">C1 <small>грамматика</small></span><div class="fr2"><img src="media/c1-hero.webp" alt="Гайд Wollen → Sollen уровня C1" loading="lazy"></div><h6>Wollen → Sollen</h6><p>Сложные темы C1 простыми схемами.</p></div>
-      <div class="sh"><span class="tg">Gemini <small>у врача</small></span><div class="fr2"><img src="media/g-krank.webp" alt="Гайд Im Krankenhaus" loading="lazy"></div><h6>Im Krankenhaus</h6><p>Текст с кликабельным переводом.</p></div>
-      <div class="sh"><span class="tg">Пазл <small>фразы</small></span><div class="fr2"><img src="media/g-puzzle.webp" alt="Конструктор предложений" loading="lazy"></div><h6>Собери предложение</h6><p>Мгновенная проверка порядка слов.</p></div>
-      <div class="sh"><span class="tg">Notion <small>трекер</small></span><div class="fr2"><img src="media/n-tracker.webp" alt="Трекер прогресса" loading="lazy"></div><h6>Трекер прогресса</h6><p>Цель, уроки, результат.</p></div>
-    </div>
-
-    <h2 class="h2 sil" style="margin-top:70px;text-align:center">Стоимость <span class="pu">доступа</span></h2>
+    <!-- PRICES -->
+    <h2 class="h2 sil" id="prices" style="margin-top:90px;text-align:center">Сколько <span class="pu">стоит</span></h2>
+    <p class="lede" style="text-align:center">Один платёж. Без подписки. Доступ навсегда.</p>
     <div class="prices">
-      <div class="pr rv"><h4>A0 – A2</h4><ul><li>Для старта с нуля</li><li>Грамматика + видео + упражнения</li><li>Лексика для жизни в стране</li><li>Трекер, флеш-карты</li></ul><div class="cost">20 €</div><div class="cn">Один платёж. Навсегда</div><a class="btn" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Приобрести</a></div>
-      <div class="pr best rv"><span class="tag g rib">Выгоднее всего</span><h4>A0 – C1</h4><ul><li>Обе платформы</li><li>340+ гайдов, 7500+ слов</li><li>Экзамены и Gemini-гайды</li><li>Подарок: A0–A2 на украинском</li><li>Все обновления бесплатно</li></ul><div class="cost"><s>40 €</s>30 €</div><div class="cn">Один платёж. Навсегда</div><a class="btn" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Приобрести</a><a class="btn pu" href="https://t.me/stellasdeutsch" target="_blank" rel="noopener">Вопрос в Telegram</a></div>
-      <div class="pr rv"><h4>B1 – C1</h4><ul><li>Если база уже есть</li><li>Gemini-гайды по темам экзаменов</li><li>Goethe, telc, TestDaF</li><li>ИИ-собеседник</li></ul><div class="cost">20 €</div><div class="cn">Один платёж. Навсегда</div><a class="btn" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Приобрести</a></div>
+      <div class="pr rv"><h4>A0 – A2</h4><p class="who">Если начинаешь с нуля</p><ul><li>Грамматика + видео + упражнения</li><li>Лексика для жизни в стране</li><li>Трекер, флеш-карты</li></ul><div class="cost">20 €</div><div class="cn">навсегда</div><a class="btn" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Приобрести</a></div>
+      <div class="pr best rv"><span class="tag g rib">Выгоднее всего</span><h4>A0 – C1</h4><p class="who">Вся лестница. Если не уверен в уровне</p><ul><li>Обе платформы</li><li>340+ гайдов, 7500+ слов</li><li>Экзамены и Gemini-гайды</li><li>Подарок: A0–A2 на украинском</li><li>Все обновления бесплатно</li></ul><div class="cost"><s>40 €</s>30 €</div><div class="cn">экономия 10 € · навсегда</div><a class="btn" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Приобрести</a><a class="btn pu" href="https://t.me/stellasdeutsch" target="_blank" rel="noopener">Вопрос в Telegram</a></div>
+      <div class="pr rv"><h4>B1 – C1</h4><p class="who">Если база уже есть</p><ul><li>Гайды по темам экзаменов</li><li>Goethe, telc, TestDaF</li><li>ИИ-собеседник в Gemini</li></ul><div class="cost">20 €</div><div class="cn">навсегда</div><a class="btn" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Приобрести</a></div>
+    </div>
+    <div class="buy" id="buy">
+      <div class="by rv"><span class="bi"><svg class="ic"><use href="#i-mouse-pointer-click"/></svg></span><b>1. Жмёшь «Приобрести»</b><small>выбираешь платформу</small></div>
+      <div class="by rv"><span class="bi"><svg class="ic"><use href="#i-credit-card"/></svg></span><b>2. Оплачиваешь</b><small>на lava.top</small></div>
+      <div class="by rv"><span class="bi"><svg class="ic"><use href="#i-smartphone"/></svg></span><b>3. Открываешь в Notion</b><small>на телефоне или ноутбуке</small></div>
     </div>
 
-    <h2 class="h2 sil" style="margin-top:80px">Частые <span class="pu">вопросы</span></h2>
+    <h2 class="h2 sil" style="margin-top:90px">Частые <span class="pu">вопросы</span></h2>
     <div class="faq">
+      <details class="fq"><summary>Что такое Notion?<span><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p>Приложение для заметок. Есть бесплатная версия для телефона и компьютера. Платформа открывается внутри него, как обычная страница.</p></details>
       <details class="fq"><summary>Это подписка?<span><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p>Нет. Платишь один раз. Доступ навсегда. Обновления для купивших бесплатно.</p></details>
-      <details class="fq"><summary>Работает без интернета?<span><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p>Да. Платформа сделана в Notion. Скачиваешь приложение на телефон или ноутбук и открываешь офлайн.</p></details>
+      <details class="fq"><summary>Работает без интернета?<span><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p>Да. Скачиваешь Notion на телефон или ноутбук и открываешь платформу офлайн.</p></details>
       <details class="fq"><summary>С какого уровня начинать?<span><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p>A0–A2, если с нуля. B1–C1, если база есть. Если сомневаешься, бери A0–C1: это 30 € вместо 40.</p></details>
       <details class="fq"><summary>Как это помогает с экзаменом?<span><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p>Есть раздел по Goethe, telc, DTZ, ÖSD и TestDaF. Плюс Gemini-гайды по темам, которые встречаются на B2–C1.</p></details>
       <details class="fq"><summary>Остались вопросы?<span><svg class="ic"><use href="#i-chevron-down"/></svg></span></summary><p>Пиши в Telegram <a class="gold" href="https://t.me/stellasdeutsch" target="_blank" rel="noopener">@stellasdeutsch</a>.</p></details>
@@ -1188,6 +1443,56 @@ function kInit(){
       box.appendChild(d); G.to(d, {x:(Math.random()-.5)*500, y:(Math.random()-.8)*360, rotation:Math.random()*720, opacity:0, duration:1.6+Math.random(), ease:'power2.out', onComplete:function(){ this.targets()[0].remove(); }}); }
   }
 
+
+  /* train scrub */
+  (function(){ var tw = $('#tw'), tr = $('#trn'); if(!G || !tw) return;
+    G.fromTo(tr, {x:0}, {x:function(){ return Math.min(0, tw.clientWidth - tr.scrollWidth); }, ease:'none',
+      scrollTrigger:{trigger:tw, start:'top 75%', end:'bottom 20%', scrub:.6, invalidateOnRefresh:true}});
+    G.from('.crown', {y:-30, rotation:-30, duration:1, ease:'bounce.out', scrollTrigger:{trigger:tw, start:'top 60%'}});
+  })();
+  /* rank bars */
+  if(G) G.from('.rb i', {scaleX:0, duration:1.2, stagger:.15, ease:'power3.out', scrollTrigger:{trigger:'#rank .rks', start:'top 85%'}});
+
+  /* device: guides ticking */
+  (function(){ var lis = $$('#nl li'); if(!lis.length) return; var k = 0, t = null, bar = $('#npBar'), n = $('#npN');
+    function tick(){ if(k >= lis.length){ lis.forEach(function(l){ l.classList.remove('on'); }); k = 0; bar.style.transform = 'scaleX(0)'; n.textContent = 0; return; }
+      lis[k].classList.add('on'); if(G) G.fromTo(lis[k].querySelector('.cb'), {scale:.4}, {scale:1, duration:.5, ease:'back.out(3)'}); k++;
+      bar.style.transform = 'scaleX('+(k/lis.length)+')'; n.textContent = k; }
+    if(reduce){ lis.forEach(function(l){ l.classList.add('on'); }); bar.style.transform = 'scaleX(1)'; n.textContent = lis.length; return; }
+    whenVisible($('#dev'), function(){ if(t) return; t = setInterval(tick, 1000); }, function(){ clearInterval(t); t = null; });
+    if(G && $('.fl')) G.from('.fl', {scale:.3, rotation:-20, duration:1, stagger:.12, ease:'elastic.out(1,.5)', scrollTrigger:{trigger:'#dev', start:'top 75%'}});
+  })();
+  /* how: line + flow + heat */
+  if(G && $('#hsFill')) G.fromTo('#hsFill', {scaleY:0}, {scaleY:1, ease:'none', scrollTrigger:{trigger:'#hs', start:'top 70%', end:'bottom 60%', scrub:true}});
+  if(G) $$('.hn').forEach(function(h){ G.from(h, {scale:.3, rotation:-90, duration:1, ease:'elastic.out(1,.45)', scrollTrigger:{trigger:h, start:'top 85%'}}); });
+  (function(){ var sp = $$('#fl4 span'); if(!sp.length) return; var k = 0, t = null;
+    function tick(){ sp.forEach(function(s, i){ s.classList.toggle('on', i === k); }); if(G) G.fromTo(sp[k], {scale:.85}, {scale:1, duration:.5, ease:'back.out(3)'}); k = (k+1) % sp.length; }
+    whenVisible($('#fl4'), function(){ if(t || reduce) return; tick(); t = setInterval(tick, 900); }, function(){ clearInterval(t); t = null; });
+  })();
+  (function(){ var h = $('#heat'); if(!h) return; var html = ''; for(var i=0;i<30;i++) html += '<i></i>'; h.innerHTML = html; var c = $$('i', h), k = 0, t = null;
+    function tick(){ if(k >= c.length){ c.forEach(function(x){ x.className = ''; }); k = 0; return; } c[k].className = (k % 7 === 6) ? 'on2' : 'on'; k++; }
+    if(reduce){ c.forEach(function(x){ x.className = 'on'; }); return; }
+    whenVisible(h, function(){ if(t) return; t = setInterval(tick, 160); }, function(){ clearInterval(t); t = null; });
+  })();
+  /* anatomy: layers fly in and stack */
+  if(G) $$('#anat .ly').forEach(function(l, i){ G.fromTo(l, {x:(i%2 ? 70 : -70), rotation:(i%2 ? 6 : -6), scale:.92}, {x:0, rotation:0, scale:1, ease:'none', scrollTrigger:{trigger:l, start:'top 98%', end:'top 62%', scrub:.5}}); });
+  (function(){ var b = $('#blank'); if(!b) return; var o = $$('#anat .opts span'), t = null, st = 0;
+    function tick(){ st = !st; b.textContent = st ? 's' : '_'; b.classList.toggle('ok', !!st); o[0].classList.toggle('ok', !!st); if(st && G) G.fromTo(b, {scale:1.5}, {scale:1, duration:.6, ease:'elastic.out(1,.4)'}); }
+    whenVisible(b, function(){ if(t || reduce) return; t = setInterval(tick, 1400); }, function(){ clearInterval(t); t = null; });
+  })();
+  /* ladder: bars grow, ball hops */
+  (function(){ var lad = $('#lad'); if(!lad || !G) return; var ls = $$('.ls', lad), ball = $('#ball'), box = $('.lsteps', lad), tl = null;
+    G.from(ls, {scaleY:.15, duration:1, stagger:.1, ease:'back.out(1.6)', scrollTrigger:{trigger:lad, start:'top 80%'}});
+    function build(){ if(tl) tl.kill(); if(!MP) return; var b = box.getBoundingClientRect(); var pts = ls.map(function(s){ var r = s.getBoundingClientRect(); return {x:r.left - b.left + r.width/2 - 10, y:r.top - b.top - 22}; });
+      ball.style.visibility = 'visible'; tl = G.timeline({repeat:-1, repeatDelay:.6}); tl.set(ball, {x:pts[0].x, y:pts[0].y});
+      for(var i=1;i<pts.length;i++){ var a = pts[i-1], c = pts[i]; tl.to(ball, {motionPath:{path:[{x:a.x,y:a.y},{x:(a.x+c.x)/2, y:Math.min(a.y,c.y)-36},{x:c.x,y:c.y}], curviness:1.4}, duration:.45, ease:'power1.inOut'});
+        tl.fromTo(ls[i], {scaleY:.94}, {scaleY:1, duration:.3, ease:'back.out(3)'}, '<.4'); }
+      tl.to(ball, {scale:1.6, duration:.25, yoyo:true, repeat:1}); tl.pause(); }
+    whenVisible(lad, function(){ setTimeout(function(){ if(!tl) build(); tl && tl.play(); }, 900); }, function(){ tl && tl.pause(); });
+    addEventListener('resize', function(){ if(tl){ build(); } });
+  })();
+  if(G) $$('.by .bi').forEach(function(e){ G.from(e, {rotation:-90, scale:.4, duration:1, ease:'elastic.out(1,.5)', scrollTrigger:{trigger:e, start:'top 92%'}}); });
+
   /* lazy videos */
   $$('video[data-src]').forEach(function(v){
     var io = new IntersectionObserver(function(es){ es.forEach(function(en){
@@ -1202,10 +1507,11 @@ function kInit(){
 
   /* reveals */
   if(G){
-    if(window.SplitText) $$('.h2.sil, .h3.sil').forEach(function(h){
+    function splitHeads(){ if(!window.SplitText) return; $$('.h2.sil, .h3.sil').forEach(function(h){
       var st = new SplitText(h, {type:'words', wordsClass:'wd'});
       G.from(st.words, {yPercent:60, rotation:4, duration:.9, stagger:.06, ease:'back.out(2)', scrollTrigger:{trigger:h, start:'top 88%'}});
-    });
+    }); ScrollTrigger.refresh(); }
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(splitHeads); else splitHeads();
     $$('section .scr').forEach(function(s){ G.from(s, {scale:.5, rotation:-14, duration:1.2, ease:'elastic.out(1,.5)', scrollTrigger:{trigger:s, start:'top 90%'}}); });
     ScrollTrigger.batch('.rv', {start:'top 92%', once:true, onEnter:function(b){ G.from(b, {y:50, scale:.96, duration:.8, stagger:.08, ease:'back.out(1.6)'}); }});
     $$('.stage .beam').forEach(function(b){ G.fromTo(b, {rotation:-14}, {rotation:14, ease:'none', scrollTrigger:{trigger:b.parentNode, start:'top bottom', end:'bottom top', scrub:true}}); });
